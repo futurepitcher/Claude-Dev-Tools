@@ -1,0 +1,72 @@
+{
+  "_comment": "Recommended permission patterns for Claude Code. Copy relevant entries to your settings.json.",
+
+  "permissions_by_category": {
+    "safe_read_operations": {
+      "description": "Read-only operations that are always safe to allow",
+      "allow": [
+        "Bash(git status)",
+        "Bash(git diff*)",
+        "Bash(git log*)",
+        "Bash(git branch*)",
+        "Bash(git show*)",
+        "Bash(cat *)",
+        "Bash(ls *)",
+        "Bash(wc *)",
+        "Bash(head *)",
+        "Bash(tail *)"
+      ]
+    },
+
+    "build_and_test": {
+      "description": "Build and test operations — safe for most projects",
+      "allow": [
+        "Bash(npm run lint)",
+        "Bash(npm run build)",
+        "Bash(npm test)",
+        "Bash(npm run typecheck)",
+        "Bash(npx tsc --noEmit*)",
+        "Bash(npx jest*)",
+        "Bash(npx vitest*)",
+        "Bash(python -m pytest*)",
+        "Bash(cargo test*)",
+        "Bash(go test*)"
+      ]
+    },
+
+    "local_services": {
+      "description": "Access to local development servers",
+      "allow": [
+        "Bash(curl http://localhost:*)",
+        "Bash(curl http://127.0.0.1:*)"
+      ]
+    },
+
+    "mcp_read_only": {
+      "description": "MCP server read-only operations",
+      "allow": [
+        "mcp__sqlite__read_query",
+        "mcp__sqlite__describe_table",
+        "mcp__sqlite__list_tables",
+        "mcp__eslint__lint-files",
+        "mcp__github__get_pull_request*",
+        "mcp__github__list_pull_requests*",
+        "mcp__github__get_issue*",
+        "mcp__github__list_issues*"
+      ]
+    },
+
+    "dangerous_operations": {
+      "description": "Operations that should ALWAYS be denied",
+      "deny": [
+        "Bash(rm -rf /)",
+        "Bash(sudo *)",
+        "Bash(git push --force*)",
+        "Bash(git reset --hard*)",
+        "Bash(chmod 777*)",
+        "Bash(curl * | bash)",
+        "Bash(wget * | bash)"
+      ]
+    }
+  }
+}

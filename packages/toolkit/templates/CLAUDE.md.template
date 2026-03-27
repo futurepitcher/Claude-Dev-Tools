@@ -1,0 +1,118 @@
+# CLAUDE.md
+
+> **[Project Name]** — [One-line description of your project]
+
+## Quick Reference
+
+| Item | Value |
+|------|-------|
+| **Language** | [TypeScript/Python/etc.] |
+| **Framework** | [Express/FastAPI/React/etc.] |
+| **Database** | [PostgreSQL/SQLite/etc.] |
+| **Test Runner** | [Jest/Vitest/Pytest/etc.] |
+
+```bash
+# Start / Build / Test
+npm run dev                # Development server
+npm run build              # Production build
+npm test                   # Run tests
+
+# Quality gates (from claude-code-toolkit)
+/plan                      # Architecture planning with research
+/review                    # Code review with specialist agents
+/commit                    # Pre-commit quality gate
+/help                      # Discover all available commands
+```
+
+---
+
+## Critical Constraints
+
+| Language | NEVER Do This |
+|----------|---------------|
+| **TypeScript** | `any` type, `as any`, `console.log`, `var`, circular imports |
+| **Python** | bare `except:`, `from x import *`, string SQL concatenation, mutable defaults |
+| **All** | hardcoded secrets, skip tests before deploy, God objects, layer violations |
+
+## Architecture Rules
+
+| Rule | Reason |
+|------|--------|
+| [e.g., All external requests via API layer] | Single entry point |
+| [e.g., UI -> API -> Service -> Repository -> Data] | Layer isolation |
+| [e.g., Dependencies via constructor injection] | Testability |
+| [e.g., External services wrapped in adapters] | Swappable implementations |
+| [e.g., Database changes require migrations] | Data integrity |
+
+---
+
+## Naming Conventions
+
+| Language | Variables/Functions | Classes | Constants | Files |
+|----------|---------------------|---------|-----------|-------|
+| TypeScript | camelCase | PascalCase | UPPER_SNAKE | PascalCase.ts |
+| Python | snake_case | PascalCase | UPPER_SNAKE | snake_case.py |
+
+---
+
+## Project Structure
+
+```
+project/
+├── src/                    # Source code
+│   ├── api/                # API routes/handlers
+│   ├── services/           # Business logic
+│   ├── repositories/       # Data access
+│   ├── types/              # Type definitions
+│   └── adapters/           # External service adapters
+├── tests/                  # Test files
+├── docs/                   # Documentation
+├── config/                 # Configuration
+└── .claude/                # Claude Code configuration (toolkit)
+    ├── agents/             # Specialist agents (35)
+    ├── skills/             # Composable skills (5)
+    ├── workflows/          # Pipeline workflows (4)
+    ├── hooks/              # Pre/post tool hooks (3)
+    ├── rules/              # Context-aware rules (4)
+    └── docs/               # Development practices
+```
+
+---
+
+## Where to Put New Files
+
+| File Type | Location |
+|-----------|----------|
+| API route | `src/api/routes/` |
+| Business logic | `src/services/` |
+| Data access | `src/repositories/` |
+| Type definitions | `src/types/` |
+| Unit test | `tests/unit/` |
+| Integration test | `tests/integration/` |
+| DB migration | `src/database/migrations/` |
+
+---
+
+## Key Commands (claude-code-toolkit)
+
+| Command | Purpose |
+|---------|---------|
+| `/plan` | Enter planning mode (research-first, 3+ approaches) |
+| `/tdd` | TDD workflow (RED-GREEN-REFACTOR) |
+| `/deslop [path]` | Remove AI-generated cruft |
+| `/session save` | Save session context |
+| `/learner` | Extract project-specific insights |
+| `/commit` | Pre-commit quality gate |
+| `/review` | Code review with specialist agents |
+| `/quality-gate` | Full agent suite validation |
+| `/help` | Discover all capabilities |
+
+---
+
+## Project-Specific Notes
+
+<!-- Add project-specific patterns, conventions, and gotchas here -->
+
+---
+
+*This CLAUDE.md was generated from the [claude-code-toolkit](https://github.com/christopherpitcher/claude-code-toolkit) template.*

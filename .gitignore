@@ -1,0 +1,12 @@
+*.log
+*.jsonl
+.DS_Store
+__pycache__/
+*.pyc
+.pre-tool-state/
+.trigger-cooldowns/
+audit.log*
+hooks/session_modified.txt
+hooks/enforcement-mode.txt
+hooks/phase-state.txt
+node_modules/

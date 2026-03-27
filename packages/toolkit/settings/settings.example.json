@@ -1,0 +1,180 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/pre-tool.sh"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write|Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/post-tool.sh"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": ".*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": ".claude/hooks/memory-check.sh"
+          }
+        ]
+      }
+    ]
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npm run lint)",
+      "Bash(npm run build)",
+      "Bash(npm test)",
+      "Bash(npm run typecheck)",
+      "Bash(git status)",
+      "Bash(git diff*)",
+      "Bash(git log*)",
+      "Bash(git branch*)",
+      "Bash(git show*)",
+      "Bash(python -m pytest*)",
+      "Bash(curl http://localhost:*)"
+    ],
+    "deny": [
+      "Bash(rm -rf /)",
+      "Bash(sudo *)",
+      "Bash(git push --force*)",
+      "Bash(git reset --hard*)"
+    ]
+  },
+  "commands": {
+    "plan": {
+      "model": "opus",
+      "description": "Enter Architecture Mode for planning"
+    },
+    "refactor": {
+      "model": "sonnet",
+      "description": "TDD Red-Green-Refactor workflow"
+    },
+    "test-gen": {
+      "model": "sonnet",
+      "description": "Generate comprehensive test suites"
+    },
+    "debug": {
+      "model": "sonnet",
+      "description": "Investigate issues without editing code"
+    },
+    "commit": {
+      "model": "haiku",
+      "description": "Git commit workflow with quality gates"
+    },
+    "review": {
+      "model": "sonnet",
+      "description": "Code review with specialist agents"
+    },
+    "quality-gate": {
+      "model": "sonnet",
+      "description": "Comprehensive quality gate with specialist agents"
+    },
+    "session_start": {
+      "model": "haiku",
+      "description": "Initialize development session with context verification"
+    },
+    "create_plan": {
+      "model": "opus",
+      "description": "Create detailed implementation plans with parallel research"
+    },
+    "implement_plan": {
+      "model": "sonnet",
+      "description": "Execute approved plans with verification"
+    },
+    "create_handoff": {
+      "model": "sonnet",
+      "description": "Create handoff document for session transfer"
+    },
+    "resume_handoff": {
+      "model": "sonnet",
+      "description": "Resume work from handoff document"
+    },
+    "context-save": {
+      "model": "haiku",
+      "description": "Save current session context for later restoration"
+    },
+    "context-restore": {
+      "model": "haiku",
+      "description": "Restore saved session context from a previous session"
+    },
+    "create_migration": {
+      "model": "sonnet",
+      "description": "Database migration workflow"
+    },
+    "create_api_endpoint": {
+      "model": "sonnet",
+      "description": "API route creation workflow"
+    },
+    "review_pr": {
+      "model": "opus",
+      "description": "Pull request review workflow"
+    },
+    "validate_plan": {
+      "model": "sonnet",
+      "description": "Pre-implementation plan validation"
+    },
+    "describe_pr": {
+      "model": "haiku",
+      "description": "Generate PR descriptions"
+    },
+    "run_tests": {
+      "model": "haiku",
+      "description": "Comprehensive test execution"
+    },
+    "security_audit": {
+      "model": "opus",
+      "description": "Security review workflow"
+    },
+    "standup-notes": {
+      "model": "haiku",
+      "description": "Generate session summary and standup notes from git activity"
+    },
+    "incident-response": {
+      "model": "sonnet",
+      "description": "Production incident investigation and response workflow"
+    },
+    "enforce": {
+      "model": "haiku",
+      "description": "Control TDD enforcement mode and development phase"
+    },
+    "workflow": {
+      "model": "sonnet",
+      "description": "Execute declarative workflow pipeline"
+    },
+    "help": {
+      "model": "haiku",
+      "description": "Discover available commands, agents, workflows, and skills"
+    },
+    "discover": {
+      "model": "haiku",
+      "description": "Context-aware suggestions based on current state"
+    },
+    "changelog": {
+      "model": "haiku",
+      "description": "Generate CHANGELOG.md from conventional commits"
+    },
+    "research_codebase": {
+      "model": "opus",
+      "description": "Comprehensive codebase exploration"
+    },
+    "memory-review": {
+      "model": "sonnet",
+      "description": "Review and update CLAUDE.md memory files for accuracy"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Claude Code runtime files (created during use, not part of the toolkit)
+.claude/hooks/audit.log
+.claude/hooks/session_modified.txt
+.claude/hooks/.last_memory_reminder
+.claude/hooks/enforcement-mode.txt
+.claude/hooks/phase-state.txt
+.claude/memory/
+.claude/context/
+.claude/cache/
