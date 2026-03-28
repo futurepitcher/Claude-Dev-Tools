@@ -1,0 +1,22 @@
+{
+  "_description": "Hexagonal perforation pattern -- a structured grid of hexagonal cutouts that reduce weight and provide ventilation while maintaining structural integrity",
+  "style_family": "perforated",
+
+  "perforation_density": 0.35,
+  "perforation_shape": "hexagon",
+  "min_bridge_width_mm": 2.5,
+
+  "hex_cell_size_mm": 12.0,
+  "hex_corner_radius_mm": 1.0,
+  "perforation_margin_from_edge_mm": 8.0,
+  "perforation_margin_from_attachment_mm": 12.0,
+
+  "gradient_enabled": true,
+  "gradient_direction": "proximal_to_distal",
+  "gradient_density_range": [0.2, 0.45],
+
+  "smoothing_iterations": 3,
+  "min_feature_size_mm": 1.5,
+
+  "_notes": "Weight reduction of approximately 25-40% depending on density. Ensure min_bridge_width is respected for the chosen material. SLS (PA12/PA11) recommended for best results with thin bridges."
+}

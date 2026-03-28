@@ -1,0 +1,27 @@
+{
+  "_description": "Default configuration for transtibial (below-knee) prosthetic cover",
+  "_prosthesis_info": "Covers the pylon and socket from just below the knee to the ankle adapter",
+
+  "prosthesis_type": "transtibial",
+  "side": "auto",
+
+  "clearance_offset_mm": 2.0,
+  "shell_thickness_mm": 3.0,
+  "min_feature_size_mm": 1.5,
+  "min_bridge_width_mm": 2.0,
+
+  "coverage_extent": "full",
+
+  "style_family": "smooth",
+  "perforation_density": 0.0,
+  "perforation_shape": "circle",
+
+  "attachment_type": "snap_clip",
+  "split_strategy": "medial_lateral",
+
+  "smoothing_iterations": 3,
+
+  "print_material": "PA12_nylon",
+  "layer_height_mm": 0.2,
+  "infill_percent": 20
+}

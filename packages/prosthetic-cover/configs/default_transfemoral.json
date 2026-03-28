@@ -1,0 +1,27 @@
+{
+  "_description": "Default configuration for transfemoral (above-knee) prosthetic cover",
+  "_prosthesis_info": "Covers the thigh segment, with partial coverage to avoid interfering with the knee joint mechanism",
+
+  "prosthesis_type": "transfemoral",
+  "side": "auto",
+
+  "clearance_offset_mm": 2.5,
+  "shell_thickness_mm": 3.5,
+  "min_feature_size_mm": 1.5,
+  "min_bridge_width_mm": 2.5,
+
+  "coverage_extent": "partial",
+
+  "style_family": "smooth",
+  "perforation_density": 0.0,
+  "perforation_shape": "circle",
+
+  "attachment_type": "snap_clip",
+  "split_strategy": "medial_lateral",
+
+  "smoothing_iterations": 3,
+
+  "print_material": "PA12_nylon",
+  "layer_height_mm": 0.2,
+  "infill_percent": 20
+}

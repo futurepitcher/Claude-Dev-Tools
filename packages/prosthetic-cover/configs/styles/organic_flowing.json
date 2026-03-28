@@ -1,0 +1,25 @@
+{
+  "_description": "Organic biomorphic -- flowing, nature-inspired forms with smooth undulating surfaces, variable thickness, and organic cutout patterns reminiscent of bones, leaves, or coral",
+  "style_family": "organic",
+
+  "organic_pattern": "voronoi",
+  "organic_cell_count": 40,
+  "organic_cell_irregularity": 0.6,
+  "organic_edge_smoothness": 0.8,
+
+  "perforation_density": 0.30,
+  "perforation_shape": "voronoi",
+  "min_bridge_width_mm": 3.0,
+
+  "surface_wave_amplitude_mm": 1.5,
+  "surface_wave_frequency": 3.0,
+  "thickness_variation_range_mm": [2.5, 4.0],
+
+  "smoothing_iterations": 4,
+  "min_feature_size_mm": 2.0,
+
+  "transition_blend_mm": 15.0,
+  "edge_fillet_radius_mm": 2.0,
+
+  "_notes": "Organic patterns are generated procedurally using Voronoi tessellation with relaxation. The flowing edges require higher smoothing and wider bridge widths. SLS recommended for best reproduction of fine organic details."
+}

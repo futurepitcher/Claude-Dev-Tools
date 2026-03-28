@@ -1,0 +1,17 @@
+{
+  "_description": "Smooth anatomical shell -- a clean, organic form that closely follows the contours of the underlying prosthesis with gentle transitions and no surface features",
+  "style_family": "smooth",
+
+  "perforation_density": 0.0,
+  "perforation_shape": "circle",
+
+  "smoothing_iterations": 5,
+  "min_feature_size_mm": 1.5,
+  "min_bridge_width_mm": 2.0,
+
+  "surface_subdivision_level": 2,
+  "edge_fillet_radius_mm": 1.5,
+  "transition_blend_mm": 10.0,
+
+  "_notes": "Best suited for a natural, understated appearance. Works well with all materials. Ideal for users who prefer a discreet prosthesis profile."
+}

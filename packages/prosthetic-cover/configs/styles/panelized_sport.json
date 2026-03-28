@@ -1,0 +1,28 @@
+{
+  "_description": "Sporty panelized -- a dynamic, athletic aesthetic with defined panel lines, chamfered edges, and angular vents inspired by automotive and sportswear design",
+  "style_family": "panelized",
+
+  "panel_count": 4,
+  "panel_gap_width_mm": 1.5,
+  "panel_gap_depth_mm": 1.0,
+  "panel_edge_chamfer_mm": 0.8,
+
+  "vent_style": "angular_slats",
+  "vent_count": 6,
+  "vent_width_mm": 3.0,
+  "vent_length_mm": 40.0,
+  "vent_angle_deg": 15.0,
+
+  "perforation_density": 0.15,
+  "perforation_shape": "diamond",
+  "min_bridge_width_mm": 2.5,
+
+  "accent_line_enabled": true,
+  "accent_line_width_mm": 1.2,
+  "accent_line_depth_mm": 0.6,
+
+  "smoothing_iterations": 2,
+  "min_feature_size_mm": 1.5,
+
+  "_notes": "The panelized style works best with a medial-lateral split strategy, as panel lines can be aligned with the split seam. Angular vents provide ventilation while maintaining a sporty look. FDM-friendly due to predominantly flat surfaces."
+}

@@ -1,0 +1,20 @@
+{
+  "_description": "Low-poly faceted -- a geometric, angular aesthetic that replaces smooth curves with flat triangular facets for a modern, digital-art appearance",
+  "style_family": "faceted",
+
+  "facet_target_face_count": 200,
+  "facet_preserve_boundaries": true,
+  "facet_edge_sharpness": 0.8,
+
+  "perforation_density": 0.0,
+  "perforation_shape": "circle",
+
+  "smoothing_iterations": 0,
+  "min_feature_size_mm": 2.0,
+  "min_bridge_width_mm": 2.0,
+
+  "edge_chamfer_mm": 0.3,
+  "flat_face_min_area_mm2": 50.0,
+
+  "_notes": "The faceted look is achieved by aggressive decimation followed by flat shading. Works well with all print technologies. The angular surfaces can actually improve layer adhesion on FDM prints where facet normals align with the build direction."
+}

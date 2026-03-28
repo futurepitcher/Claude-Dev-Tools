@@ -1,0 +1,23 @@
+{
+  "_description": "Geometric lattice -- an open lattice structure with repeating geometric cells that create a visually striking, modern aesthetic while dramatically reducing weight",
+  "style_family": "lattice",
+
+  "lattice_cell_type": "diamond",
+  "lattice_cell_size_mm": 15.0,
+  "lattice_strut_diameter_mm": 2.0,
+  "lattice_node_fillet_mm": 0.5,
+
+  "lattice_density_gradient": true,
+  "lattice_dense_zone": "edges",
+  "lattice_dense_strut_diameter_mm": 3.0,
+
+  "perforation_density": 0.50,
+  "perforation_shape": "diamond",
+  "min_bridge_width_mm": 2.0,
+
+  "shell_border_width_mm": 6.0,
+  "smoothing_iterations": 2,
+  "min_feature_size_mm": 1.5,
+
+  "_notes": "Highly open structure provides maximum ventilation and lightest weight. Requires SLS or SLA printing for reliable strut quality. Not recommended for FDM. Consider structural reinforcement at attachment points."
+}
